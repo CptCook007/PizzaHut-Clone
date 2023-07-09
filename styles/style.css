@@ -79,33 +79,34 @@ nav {
     font-family: 600;
     font-size: 10px;
     position: relative;
-    z-index: 10;
+    /* z-index: 10; */
     height: 307.4px;
     position: relative;
-    top: -120px;
+    top: -125px;
     align-items: center;
     flex-direction: column;
 }
 
 .order-info {
     width: 500px;
-    height: 260.9px;
+    height: 205.4px;
     background-color: white;
     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.283);
-    border-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 .delivery,
 .collect {
-    color: #454545;
-    font-size: 16px;
+    color: #454545 !important;
+    font-size: 16.5px;
     text-decoration: none;
     display: flex;
     gap: 10px;
-    background-color: rgb(217, 221, 227);
+    background-color: #cacaca !important;
     justify-content: center;
     align-items: center;
-    border-radius: 2px;
+    border: none !important;
 }
 
 #order-img {
@@ -114,14 +115,36 @@ nav {
 }
 
 .delivery {
-    width: 40%;
-
+    width: 42%;
+    display: flex;
+    justify-content: center;
 }
 
 .collect {
-    width: 60%;
+    width: 58%;
 }
 
+.active #order-img {
+    filter: saturate(1);
+    /* background-color: #fff; */
+    border: none;
+}
+
+.active {
+    color: #da291c !important;
+    background-color: white !important;
+    position: relative;
+    left: 0;
+    top: -7px;
+    height: 60px;
+}
+
+.btn {
+    border-top-right-radius: 3px !important;
+    border-top-left-radius: 3px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
 
 .tabs {
     display: flex;
@@ -164,12 +187,16 @@ nav {
 .location {
     height: 45px;
     padding-top: 17.5px;
-    width: 85.5%;
+    width: 86.2%;
     margin-left: 20px;
     padding-left: 10px;
     color: #7eb0ea;
     font-size: 12px;
-    border: 0.1px solid rgba(0, 0, 0, 0.084);
+    border: 0.1px solid rgba(0, 0, 0, 0.073);
+}
+
+.location:hover {
+    cursor: pointer;
 }
 
 .divider {
@@ -179,7 +206,7 @@ nav {
 }
 
 .deals-divider {
-    margin-top: 50px;
+    margin-top: 54px;
     display: flex;
     justify-content: center;
     padding-left: 10px;
@@ -233,6 +260,10 @@ nav {
     width: 525px !important;
     height: 350px !important;
 } */
+.deal-img {
+    cursor: pointer;
+}
+
 footer {
     margin-top: 45px;
     height: 677px;
@@ -332,6 +363,10 @@ footer {
     display: flex;
     gap: 20px;
     justify-content: center;
+}
+
+.social:hover {
+    cursor: pointer;
 }
 
 .footer-text {
@@ -484,6 +519,11 @@ footer {
     .collect {
         overflow: hidden;
         width: 170px;
+    }
+
+    .tabs {
+        gap: 0px;
+        width: 301px;
     }
 }
 
